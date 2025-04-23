@@ -1,0 +1,457 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 50px;
+    background-image: url('../../images/תמונת רקע נומורולוגיה.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    padding: 0;
+}
+  
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    z-index: 1;
+}
+  
+.content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px 0;
+}
+  
+.header {
+    margin-bottom: 60px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+  
+.title {
+    font-family: 'Assistant', sans-serif;
+    font-size: 2.8rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+  
+.itemsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 28px;
+    position: relative;
+    margin: 0 auto;
+}
+  
+.item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 24px;
+    border-radius: 20px;
+    position: relative;
+    flex-direction: row-reverse;
+    transition: all 1.5s cubic-bezier(0.25, 1, 0.3, 1);
+    max-width: 100%;
+    transform-origin: center;
+    opacity: 0;
+    transform: translateY(20px);
+    background: rgba(255, 255, 255, 0.06); /* עוד יותר שקוף */
+    backdrop-filter: blur(10px); /* הגדלת הבלור לאפקט זכוכית מודגש */
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* צל עדין יותר */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* קו מסגרת דק לאפקט זכוכית */
+}
+  
+.item.fromRight {
+    transform: translateX(60px) translateY(10px);
+}
+  
+.item.fromLeft {
+    transform: translateX(-60px) translateY(10px);
+}
+  
+.item.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+  
+.item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(125deg, 
+      rgba(255, 255, 255, 0.2) 0%, 
+      rgba(255, 255, 255, 0.05) 40%, 
+      rgba(230, 200, 210, 0.03) 100%); /* גרדיאנט עדין יותר */
+    opacity: 0.7; /* שקיפות מוגברת */
+    z-index: -1;
+    border-radius: 20px;
+}
+  
+.item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.8s ease;
+    z-index: 1;
+}
+
+.item:hover::after {
+    transform: translateX(300%) skewX(-15deg);
+}
+  
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 220, 230, 0.8);
+    flex-shrink: 0;
+    transition: all 1s cubic-bezier(0.25, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 150, 180, 0.2);
+}
+  
+.iconWrapper::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 220, 230, 0.3)
+    );
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.3;
+}
+  
+.iconWrapper::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    opacity: 0.5;
+    z-index: 1;
+}
+  
+.icon {
+    width: 22px;
+    height: 22px;
+    color: #9A4F64;
+    stroke-width: 2;
+    transition: all 0.8s ease;
+    position: relative;
+    z-index: 2;
+}
+  
+.itemText {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.15rem;
+    margin: 0;
+    color: #8A4F60;
+    flex-grow: 1;
+    line-height: 1.4;
+    text-align: right;
+    transition: all 0.8s ease;
+    font-weight: 500;
+}
+  
+/* מדיה קוורי עבור מסכים קטנים מאוד - מתחת ל-350px */
+@media (max-width: 349px) {
+    .container {
+        padding: 15px 2px;
+        width: 96%;
+        border-radius: 25px; /* Adjusted border-radius proportionally */
+    }
+    
+    .content {
+        padding: 15px 0;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .header {
+        margin-bottom: 30px;
+    }
+    
+    .itemsContainer {
+        gap: 20px;
+    }
+    
+    .item {
+        padding: 12px 14px;
+        gap: 10px;
+        width: 82%;
+        margin: 0 auto;
+        border-radius: 16px; /* Adjusted border-radius proportionally */
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .iconWrapper {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .itemText {
+        font-size: 1rem;
+    }
+}
+  
+/* מדיה קוורי עבור 350px - 450px */
+@media (min-width: 350px) and (max-width: 450px) {
+    .container {
+        padding: 15px 4px;
+        width: 97%;
+        border-radius: 30px; /* Adjusted border-radius proportionally */
+    }
+    
+    .content {
+        padding: 20px 0;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .item {
+        padding: 14px 16px;
+        gap: 12px;
+        width: 85%;
+        margin: 0 auto;
+        border-radius: 17px; /* Adjusted border-radius proportionally */
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .iconWrapper {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .itemText {
+        font-size: 1.05rem;
+    }
+}
+  
+/* מדיה קוורי עבור 450px - 550px */
+@media (min-width: 451px) and (max-width: 550px) {
+    .container {
+        padding: 20px 5px;
+        width: 98%;
+        border-radius: 35px; /* Adjusted border-radius proportionally */
+    }
+    
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .item {
+        padding: 16px 18px;
+        width: 88%;
+        margin: 0 auto;
+        border-radius: 18px; /* Adjusted border-radius proportionally */
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .iconWrapper {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .itemText {
+        font-size: 1.1rem;
+    }
+}
+  
+/* מדיה קוורי עבור 550px - 650px */
+@media (min-width: 551px) and (max-width: 650px) {
+    .container {
+        padding: 25px 8px;
+        width: 98%;
+        border-radius: 40px; /* Adjusted border-radius proportionally */
+    }
+    
+    .title {
+        font-size: 2.3rem;
+    }
+    
+    .itemsContainer {
+        gap: 20px;
+    }
+    
+    .item {
+        padding: 18px 20px;
+        width: 88%;
+        margin: 0 auto;
+        border-radius: 18px; /* Adjusted border-radius proportionally */
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .itemText {
+        font-size: 1.15rem;
+    }
+}
+  
+/* מדיה קוורי עבור 650px - 750px */
+@media (min-width: 651px) and (max-width: 750px) {
+    .container {
+        border-radius: 45px; /* Adjusted border-radius proportionally */
+    }
+    
+    .title {
+        font-size: 2.6rem;
+    }
+    
+    .itemsContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .item {
+        width: 85%;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .itemText {
+        font-size: 1.15rem;
+    }
+}
+  
+/* מדיה קוורי עבור 750px - 850px */
+@media (min-width: 751px) and (max-width: 850px) {
+    .container {
+        border-radius: 48px; /* Adjusted border-radius proportionally */
+    }
+    
+    .itemsContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .item {
+        width: calc(48% - 18px);
+        margin: 0 9px 28px;
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+}
+  
+/* מדיה קוורי עבור 850px - 950px */
+@media (min-width: 851px) and (max-width: 950px) {
+    .container {
+        border-radius: 50px; /* Original border-radius */
+    }
+    
+    .item {
+        width: calc(47% - 20px);
+        margin: 0 10px 28px;
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .title {
+        font-size: 2.7rem;
+    }
+}
+  
+/* מדיה קוורי עבור 950px - 1050px */
+@media (min-width: 951px) and (max-width: 1050px) {
+    .container {
+        border-radius: 50px; /* Original border-radius */
+    }
+    
+    .item {
+        width: calc(46% - 22px);
+        margin: 0 11px 28px;
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .content {
+        max-width: 920px;
+    }
+}
+  
+/* מדיה קוורי עבור 1050px - 1150px */
+@media (min-width: 1051px) and (max-width: 1150px) {
+    .container {
+        border-radius: 50px; /* Original border-radius */
+    }
+    
+    .item {
+        width: calc(45% - 24px);
+        margin: 0 12px 28px;
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .content {
+        max-width: 1020px;
+    }
+}
+  
+/* מדיה קוורי עבור 1150px - 1250px */
+@media (min-width: 1151px) and (max-width: 1250px) {
+    .container {
+        border-radius: 50px; /* Original border-radius */
+    }
+    
+    .item {
+        width: calc(45% - 26px);
+        margin: 0 13px 28px;
+        background: rgba(255, 255, 255, 0.06); /* Darker background */
+    }
+    
+    .content {
+        max-width: 1120px;
+    }
+}

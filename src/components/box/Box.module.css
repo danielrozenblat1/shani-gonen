@@ -1,0 +1,107 @@
+.box {
+  width: 380px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 3% auto;
+  background: transparent;
+  padding: 25px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.description {
+  font-size: 1rem;
+  font-family: "AssistantR", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  direction: rtl;
+  width: 100%;
+  color: #8A5466;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-family: "Assistant", sans-serif;
+  text-align: center;
+  margin: 0 0 15px;
+  direction: rtl;
+  width: 100%;
+  color: #9A4F64;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  width: 22%;
+  margin: 0 auto 15px;
+  color: #9A4F64;
+}
+
+@media only screen and (max-width: 350px) {
+  .box {
+    width: 280px;
+    padding: 20px;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    margin: 0 0 12px;
+  }
+
+  .icon {
+    width: 20%;
+    margin: 0 auto 12px;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+  .box {
+    width: 300px;
+    padding: 22px;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin: 0 0 12px;
+  }
+
+  .icon {
+    width: 20%;
+    margin: 0 auto 12px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 550px) {
+  .box {
+    width: 380px;
+    padding: 25px;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    margin: 0 0 12px;
+  }
+  
+  .icon {
+    margin: 0 auto 12px;
+  }
+}
