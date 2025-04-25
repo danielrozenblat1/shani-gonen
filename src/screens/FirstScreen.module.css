@@ -223,11 +223,11 @@
 @media (min-width: 550px) {
   .leftImage {
       display: block;
-      background-image: url('../images/שני\ גונן\ תמונה\ שמאלית.png');
+      background-image: url('../images/שני\ גונן\ תמונה\ שמאל.png');
   }
   .rightImage {
       display: block;
-      background-image: url('../images/שני\ גונן\ תמונה\ ימנית.png');
+      background-image: url('../images/שני\ גונן\ תמונה\ ימין.png');
   }
   .contentBox {
       padding: 2rem;

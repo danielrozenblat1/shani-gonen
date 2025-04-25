@@ -93,7 +93,7 @@ const NumerologyScreen = () => {
                 </div>
             </div>
             <div className={styles.subtitleSmall}>
-                את לא לבד.
+      חשוב לי שתביני שאת לא לבד
             </div>
             <div className={styles.description}>
                 אני יודעת איך זה מרגיש ואני כאן כדי לגרום לך לחזור להרגיש איך זה להרגיש בטוחה בעצמך.
@@ -107,7 +107,7 @@ const NumerologyScreen = () => {
                 דרך המספרים – נחשפים דפוסים, כאבים, ומתנות שעד היום לא ידעת איך להשתמש בהן.
             </div>
             <div className={styles.subtitleSmall}>
-              ובעזרת הנומורולוגיה ומיקוד נכון, את תוכלי
+              ובעזרת הנומורולוגיה, תקשור ומיקוד נכון, את תוכלי
             </div>
         </div>
     );
