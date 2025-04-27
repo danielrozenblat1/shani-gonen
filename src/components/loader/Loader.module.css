@@ -1,56 +1,90 @@
-.loader {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background: #92A8BD; /* גוון תכלת עדין מאוד */
-    transform: rotateX(65deg) rotate(45deg);
-    color: #fff;
-    animation: layers1 1s linear infinite alternate;
+.typing-indicator {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  z-index: 4;
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.typing-circle {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000;
+  left: 15%;
+  transform-origin: 50%;
+  animation: typing-circle7124 0.5s alternate infinite ease;
+}
+
+@keyframes typing-circle7124 {
+  0% {
+    top: 20px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
   }
-  .container{
-    height: 100vh;
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  40% {
+    height: 8px;
+    border-radius: 50%;
+    transform: scaleX(1);
   }
-  .loader:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.7);
-    animation: layerTr 1s linear infinite alternate;
+  100% {
+    top: 0%;
   }
-  
-  @keyframes layers1 {
-    0% {
-      box-shadow: 0px 0px 0 0px;
-    }
-    90%,
-    100% {
-      box-shadow: 20px 20px 0 -4px;
-    }
+}
+
+.typing-circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.typing-circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.typing-shadow {
+  width: 5px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 30px;
+  transform-origin: 50%;
+  z-index: 3;
+  left: 15%;
+  filter: blur(1px);
+  animation: typing-shadow046 0.5s alternate infinite ease;
+}
+
+@keyframes typing-shadow046 {
+  0% {
+    transform: scaleX(1.5);
   }
-  
-  @keyframes layerTr {
-    0% {
-      transform: translate(0, 0) scale(1);
-    }
-    100% {
-      transform: translate(-25px, -25px) scale(1);
-    }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
   }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
   }
-  
-  .text {
-    margin-top: 20px;
-    font-family: "AssistantR", sans-serif;
-    color: #92A8BD; /* צבע תכלת עדין לטקסט */
-    font-size: 18px;
-    direction: rtl;
-  }
+}
+
+.typing-shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.typing-shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}

@@ -1,13 +1,19 @@
 import React from 'react';
 import styles from './Loader.module.css';
 
-const LoadingEffect = () => {
-  return (
-    <div className={styles.container}>
-      <span className={styles.loader}></span>
-      <span className={styles.text}>טוען...</span>
+const Loader = () => {
+  return <>
+  <div className={styles.container}>
+    <div className={styles['typing-indicator']}>
+      <div className={styles['typing-circle']}></div>
+      <div className={styles['typing-circle']}></div>
+      <div className={styles['typing-circle']}></div>
+      <div className={styles['typing-shadow']}></div>
+      <div className={styles['typing-shadow']}></div>
+      <div className={styles['typing-shadow']}></div>
     </div>
-  );
+    </div>
+  </>
 };
 
-export default LoadingEffect;
+export default Loader;
