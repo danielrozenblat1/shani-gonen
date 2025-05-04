@@ -1,11 +1,16 @@
 import React from 'react';
-import { Users, Heart, MessageCircle, Sparkles, Compass } from 'lucide-react';
+import { Users, Heart, MessageCircle, Sparkles, Compass, Book, History, Wheat } from 'lucide-react';
 import styles from './Services.module.css';
 import question from "../../images/רק שאלה.jpg";
-import groups from "../../images/שני גונן רקע.png"
-import questions from "../../images/ייעוץ נומרולוגי.jpg"
-import livui from "../../images//שני גונן ייעוץ.png"
-import tikshur from "../../images/תקשור שני.jpg"
+import groups from "../../images/שני גונן רקע.png";
+import questions from "../../images/ייעוץ נומרולוגי.jpg";
+import livui from "../../images//שני גונן ייעוץ.png";
+import tikshur from "../../images/תקשור חדש.png";
+// Note: You'll need to add image imports for the new services
+import privateLesson from "../../images/שיעור פרטי נומורולוגיה.jpg"; // Add your actual image path
+import pastLife from "../../images/תקשור גלגולים.jpg"; // Add your actual image path
+import challah from "../../images/שני גונן הפרשת חלה.png"; // Add your actual image path
+
 const ServicesComponent = () => {
   const phoneNumber = "972546723229";
   
@@ -54,6 +59,33 @@ const ServicesComponent = () => {
       solution: "לקבוצות נשים המחפשות חיבור, העצמה והשראה.",
       icon: <Users size={20} className={styles.icon} />,
       image: groups
+    },
+    {
+      id: 6,
+      title: "שיעור פרטי בנומרולוגיה",
+      subtitle: "שיעור אישי מותאם לקצב ולרמה שלך, בו תלמדי את יסודות הנומרולוגיה ואיך לפרש מספרים בחייך. מפגש של שעה וחצי בזום או פרונטלי, הכולל חומרי לימוד וכלים פרקטיים.",
+      forWhom: "למי זה מתאים?",
+      solution: "למי שמתעניינת בנומרולוגיה ורוצה ללמוד את השפה המספרית כדרך חיים.",
+      icon: <Book size={20} className={styles.icon} />,
+      image: privateLesson
+    },
+    {
+      id: 7,
+      title: "תקשור ריפוי בשחזור גלגולים",
+      subtitle: "מסע תקשורי עמוק לחיים קודמים, בו נאתר דפוסים, הבטחות, שבועות ומערכות יחסים שמשפיעים על חייך כיום. תהליך מרפא שפותח חסימות ומאפשר שחרור קארמות.",
+      forWhom: "למי זה מתאים?",
+      solution: "למי שמרגישה דפוסים חוזרים בחייה ומעוניינת בריפוי שורשי ועמוק.",
+      icon: <History size={20} className={styles.icon} />,
+      image: pastLife
+    },
+    {
+      id: 8,
+      title: "הפרשת חלה",
+      subtitle: "טקס עוצמתי ומרגש של הפרשת חלה בקבוצה או באופן פרטי. משלב לימוד רוחני, חיבור נשי, כוונות וברכות. חוויה מעצימה של חיבור למסורת ולכוח הנשי.",
+      forWhom: "למי זה מתאים?",
+      solution: "למי שמחפשת חוויה רוחנית עוצמתית, חיבור לשורשים ולמסורת הנשית.",
+      icon: <Wheat size={20} className={styles.icon} />,
+      image: challah
     }
   ];
 

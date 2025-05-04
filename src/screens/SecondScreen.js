@@ -53,7 +53,7 @@ const NumerologyScreen = () => {
             </div>
      
             <div className={styles.description}>
-                אם את מרגישה שאת רצה בלופים, נמשכת שוב לאותם מקומות וקשרים שעושים לך לא טוב ולא מצליחה לשים את הפוקוס על עצמך.  
+                אם את מרגישה שאת רצה בלופים, נמשכת שוב לאותם מקומות וקשרים שלא עושים לך טוב ולא מצליחה לשים את הפוקוס על עצמך.  
             </div>
             
             <div className={styles.subtitleSmall}>
@@ -71,7 +71,7 @@ const NumerologyScreen = () => {
                     <div className={styles.iconCircle}>
                         <Heart className={styles.icon} size={24} strokeWidth={1} />
                     </div>
-                    <span>קשרים שמתחילים חזק – אבל גומרים אותך</span>
+                    <span>קשרים שיש בהם משיכה חזקה אבל היחסים בהם מאוד מאתגרים</span>
                 </div>
                 <div className={styles.concernItem}>
                     <div className={styles.iconCircle}>
@@ -96,7 +96,7 @@ const NumerologyScreen = () => {
       חשוב לי שתביני שאת לא לבד
             </div>
             <div className={styles.description}>
-                אני יודעת איך זה מרגיש ואני כאן כדי לגרום לך לחזור להרגיש איך זה להרגיש בטוחה בעצמך.
+            אני יודעת איך זה מרגיש ואני כאן כדי לעזור לך לחזור להרגיש בטוחה בעצמך
             </div>
             
             <div className={styles.description}>

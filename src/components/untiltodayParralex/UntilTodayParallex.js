@@ -71,16 +71,13 @@ const UntilToday = () => {
     },
     {
       icon: <Heart className={styles.icon} />,
-      text: "למדו להביע את עצמן בקשרים מתוך חיבור לאנרגיה נשית מאוזנת",
+      text: "למדו להביע את עצמן בקשרים מתוך חיבור לאנרגיה נקבית מאוזנת",
     },
     {
       icon: <ThumbsUp className={styles.icon} />,
       text: "פיתחו אומץ לצאת מאזור הנוחות ולבחור בעצמן לראשונה",
     },
-    {
-      icon: <Package className={styles.icon} />,
-      text: "גילו את הייחודיות שלהן והפסיקו לחיות חיים של ריצוי אחרים",
-    },
+ 
     {
         icon: <Award className={styles.icon} />,
         text: "השתחררו מדפוסי ה״אובר שליטה״ ולמדו לשחרר כשאפשר וכשצריך ",

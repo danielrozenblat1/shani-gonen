@@ -22,6 +22,10 @@ import result17 from "../../images/שני גונן המלצות 17.png";
 import result18 from "../../images/שני גונן המלצות 18.png";
 import result19 from "../../images/שני גונן המלצות 19.png";
 import result20 from "../../images/שני גונן המלצות 20.png";
+import result21 from "../../images/שני גונן המלצות 21.png";
+import result22 from "../../images/שני גונן המלצות 22.png";
+import result23 from "../../images/שני גונן המלצות 23.png";
+import result24 from "../../images/שני גונן המלצות 24.png";
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -84,12 +88,12 @@ const Recommends = () => {
   const images = [
     result5, result6, result7, result8, result9, result3, result4, 
     result10, result11, result12, result13, result14, result15, result16, 
-    result17, result18, result19, result20, result1, result2
+    result17, result18, result19, result20, result1, result2,result21,result22,result23,result24
   ];
 
   return (
     <>
-      <div className={styles.title}>והגיבו ככה:</div>
+      <div className={styles.title}>והנה חלק מהתגובות שלהן:</div>
       <div className={styles.explain}>החליקי בין התמונות</div>
       
       <div className={styles.sliderContainer}>
