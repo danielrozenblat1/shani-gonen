@@ -59,7 +59,7 @@
  
 .contentBox {
   text-align: center;
-  padding: 2.5rem;
+  padding: 2rem 2.5rem;
   width: 90%;
   position: absolute;
   bottom: 5%;
@@ -200,7 +200,7 @@
  
 @media (min-width: 350px) {
   .contentBox {
-      padding: 1.7rem;
+    padding: 1rem 1.8rem;
       width: 80%;
       bottom: 5%;
   }
@@ -211,7 +211,7 @@
  
 @media (min-width: 450px) {
   .contentBox {
-      padding: 1.8rem;
+      padding: 1.4rem 1.8rem;
       width: 85%;
       bottom: 5%;
   }
