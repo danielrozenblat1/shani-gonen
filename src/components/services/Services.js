@@ -5,7 +5,7 @@ import question from "../../images/רק שאלה.jpg";
 import groups from "../../images/שני גונן רקע.png";
 import questions from "../../images/ייעוץ נומרולוגי.jpg";
 import livui from "../../images//שני גונן ייעוץ.png";
-import tikshur from "../../images/תקשור חדש.png";
+import tikshur from "../../images/שני גונן להבות.png";
 // Note: You'll need to add image imports for the new services
 import privateLesson from "../../images/שיעור פרטי נומורולוגיה.jpg"; // Add your actual image path
 import pastLife from "../../images/תקשור גלגולים.jpg"; // Add your actual image path
