@@ -62,12 +62,8 @@ const UntilToday = () => {
   
   const achievements = [
     {
-        icon: <Package className={styles.icon} />,
-        text: "גילו את הייחודיות שלהן והפסיקו לחיות חיים של ריצוי אחרים",
-      },
-    {
-      icon: <Star className={styles.icon} />,
-      text: "שחררו חסמים כלכליים ויצרו מערכת יחסים בריאה עם כסף",
+      icon: <Award className={styles.icon} />,
+      text: "ריפאו קשרים נשמתיים וחוויות קארמתיות שחזרו בחייהן",
     },
     {
       icon: <Heart className={styles.icon} />,
@@ -77,16 +73,22 @@ const UntilToday = () => {
       icon: <ThumbsUp className={styles.icon} />,
       text: "פיתחו אומץ לצאת מאזור הנוחות ולבחור בעצמן לראשונה",
     },
+    {
+        icon: <Package className={styles.icon} />,
+        text: "גילו את הייחודיות שלהן והפסיקו לחיות חיים של חוסר הגשמה וריצוי אחרים",
+      },
+    {
+      icon: <Star className={styles.icon} />,
+      text: "שחררו חסמים כלכליים ויצרו מערכת יחסים בריאה עם כסף",
+    },
+  
+   
  
     {
         icon: <Award className={styles.icon} />,
         text: "השתחררו מדפוסי ה״אובר שליטה״ ולמדו לשחרר כשאפשר וכשצריך ",
       },
   
-    {
-      icon: <Award className={styles.icon} />,
-      text: "ריפאו קשרים נשמתיים וחוויות קארמתיות שחזרו בחייהן",
-    },
 
 
   ];
