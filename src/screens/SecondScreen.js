@@ -4,8 +4,10 @@ import { Star, Search, Brain, Zap, Heart } from 'lucide-react';
 
 const NumerologyScreen = () => {
     const INTRO_TEXTS = [
-        "מרגישה שלאחרונה את פשוט.. לא את?",
+
         "נמשכת שוב לקשר שמכאיב – אבל לא מצליחה לשחרר?",
+        "מרגישה שלאחרונה את פשוט.. לא את?",
+     
         "יודעת שמגיע לך יותר – אבל לא מצליחה לבחור בעצמך?"
     ];
 
@@ -65,7 +67,7 @@ const NumerologyScreen = () => {
                     <div className={styles.iconCircle}>
                         <Search className={styles.icon} size={24} strokeWidth={1} />
                     </div>
-                    <span>תחושת בלבול – לא באמת יודעת מי את או מה את רוצה</span>
+                    <span>תחושת בלבול – את לא באמת יודעת מי את או מה את רוצה</span>
                 </div>
                 <div className={styles.concernItem}>
                     <div className={styles.iconCircle}>
@@ -101,13 +103,13 @@ const NumerologyScreen = () => {
             
             <div className={styles.description}>
                 אני כאן לא כדי לתקן אותך.  
-                אלא להזכיר לך מי את באמת – ולתת לך כלים לחזור לעצמך.
+                אלא להזכיר לך מי את באמת – ולתת לך כלים להתמודדות.
             </div>
             <div className={styles.description}>
                 דרך המספרים – נחשפים דפוסים, כאבים, ומתנות שעד היום לא ידעת איך להשתמש בהן.
             </div>
             <div className={styles.subtitleSmall}>
-              ובעזרת הנומורולוגיה, תקשור ומיקוד נכון, את תוכלי
+              ובעזרת נומורולוגיה, תקשור, כלים נכונים והתמקדות נכונה בשורש הבעיה, את תוכלי
             </div>
         </div>
     );
