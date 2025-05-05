@@ -1,4 +1,4 @@
 @import url("./fonts/font.css");
 body{
-    background: linear-gradient(135deg, rgba(255,248,243,1) 0%, rgba(255,243,242,1) 50%, rgba(255,250,242,1) 100%);
+    background: linear-gradient(135deg, rgb(255, 239, 236) 0%, rgba(255,243,242,1) 50%, rgb(255, 244, 242) 100%);
 }
