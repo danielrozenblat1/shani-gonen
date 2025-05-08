@@ -82,7 +82,10 @@ const UntilToday = () => {
       text: "שחררו חסמים כלכליים ויצרו מערכת יחסים בריאה עם כסף",
     },
   
-   
+    {
+      icon: <Award className={styles.icon} />,
+      text: "התחברו לילדה הפנימית, ריפאו אותה ולמדו להקשיב לקול הפנימי שלהן בביטחון",
+    },
  
     {
         icon: <Award className={styles.icon} />,
